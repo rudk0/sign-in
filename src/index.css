@@ -1,0 +1,57 @@
+:root {
+  --color-primary: hsl(255deg 50% 50%);
+  --color-primary-hover: hsl(255deg 50% 45%);
+  --color-white: hsl(0deg 0% 100%);
+  --color-background: hsl(0deg 0% 100%);
+  --color-background-secondary: hsl(220deg 50% 96%);
+  --color-text: hsl(0deg 0% 20%);
+  --color-text-secondary: hsl(0deg 0% 45%);
+  --color-outline: hsl(265deg 50% 70%);
+  --color-input-border: hsl(250deg 15% 90%);
+  --font-size-regular: 14px;
+  --font-size-small: 12px;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-primary: hsl(255deg 80% 75%);
+    --color-primary-hover: hsl(255deg 80% 70%);
+    --color-background: hsl(0deg 0% 20%);
+    --color-background-secondary: hsl(255deg 20% 50%);
+    --color-text: hsl(0deg 0% 100%);
+    --color-text-secondary: hsl(0deg 0% 65%);
+    --color-input-border: hsl(250deg 15% 90%);
+  }
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Inter, sans-serif;
+  font-size: var(--font-size-regular);
+  line-height: 1.5;
+}
+
+@supports (font-variation-settings: normal) {
+  body {
+    font-family: "Inter var", sans-serif;
+  }
+}
+
+.visually-hidden {
+  position: absolute;
+
+  overflow: hidden;
+
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+
+  clip: rect(0 0 0 0);
+  border: 0;
+}

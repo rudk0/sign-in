@@ -1,0 +1,30 @@
+.container {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  color: var(--color-text);
+}
+
+.checkbox {
+  width: 1em;
+  height: 1em;
+  border: 1px solid var(--color-input-border);
+  border-radius: 4px;
+}
+
+.input:checked ~ .checkbox {
+  background-color: var(--color-primary);
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' stroke-width='4' stroke='white' fill='none' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath stroke='none' d='M0 0h24v24H0z' fill='none'%3E%3C/path%3E%3Cpath d='M5 12l5 5l10 -10'%3E%3C/path%3E%3C/svg%3E%0A");
+  background-size: 100%;
+  border-color: var(--color-primary);
+}
+
+.input:focus ~ .checkbox,
+.input:focus-visible ~ .checkbox {
+  outline: 2px solid var(--color-outline);
+  outline-offset: 2px;
+}
+
+.input:focus:not(:focus-visible) ~ .checkbox {
+  outline: none;
+}
